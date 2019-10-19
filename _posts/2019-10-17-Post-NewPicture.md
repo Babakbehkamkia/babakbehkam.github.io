@@ -29,7 +29,7 @@ My friends in the picture are:
 
 
 
-![alt text](assets/images/mygrouppic.jpg"Class Picture")
+![alt text](../assets/images/mygrouppic.jpg"Class Picture")
 
 
 
