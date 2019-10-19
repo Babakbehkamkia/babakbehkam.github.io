@@ -3,7 +3,7 @@ layout: posts
 title: Sample post 1
 ---
 
-## this is my class mates at 2018
+## this is my class mates in 2018
 My friends in the picture are:
 - fakhredin
 - abolfazl
