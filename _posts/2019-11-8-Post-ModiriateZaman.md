@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Moiriate Zaman
+title: Modiriate Zaman
 ---
 
 # مدیریت زمان
@@ -16,4 +16,6 @@ title: Moiriate Zaman
 
 - ترم اول ترمی بسیار مهم برای ترم های بعدی است
 - من در ترم اول به اندازه ی کنکورم درس میخواندم
-- 
+
+---
+**Test**: This is atest
