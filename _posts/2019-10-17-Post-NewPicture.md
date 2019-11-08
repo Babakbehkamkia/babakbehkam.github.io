@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Sample post 1
+title: my school picture
 ---
 
 ## this is my class mates in 2018
