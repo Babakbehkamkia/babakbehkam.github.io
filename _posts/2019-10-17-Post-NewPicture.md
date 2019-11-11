@@ -29,7 +29,7 @@ My friends in the picture are:
 
 
 
-![an image alt text]({{babakbehkamkia.github.io}}.../assets/images "mygrouppic.jpg")
+![an image alt text]({{babakbehkamkia.github.io}}/assets/images/mygrouppic.jpg)
 
 
 
