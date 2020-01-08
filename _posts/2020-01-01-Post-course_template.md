@@ -4,7 +4,7 @@ title: course_template
 ---
 
 # course_template
-- site : https://babakbehkamkia.github.io/course_template/
+- site : "https://babakbehkamkia.github.io/course_template/"
 
 
 
