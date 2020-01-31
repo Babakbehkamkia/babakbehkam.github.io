@@ -10,7 +10,7 @@ title: FinalExam
 
 ### جواب سوال     
 
-![an image alt text]({{babakbehkamkia.github.io}}/assets/images/7.png)
+![an image alt text]({{babakbehkamkia.github.io}}/assets/images/7.jpg)
 
 
 ## q8
@@ -20,4 +20,4 @@ title: FinalExam
 
 ### جواب سوال
 
-![an image alt text]({{babakbehkamkia.github.io}}/assets/images/8.png)
+![an image alt text]({{babakbehkamkia.github.io}}/assets/images/8.jpg)
