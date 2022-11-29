@@ -10,7 +10,7 @@ author_profile: true
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-    {% include sidebar.html %}
+    
   <head>
     {% include head.html %}
     {% include head/custom.html %}
@@ -20,7 +20,16 @@ author_profile: true
 
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
-
+    <div id="main" role="main">
+        {% include sidebar.html %}
+      
+        <div class="archive">
+          {% unless page.header.overlay_color or page.header.overlay_image %}
+            <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+          {% endunless %}
+          {{ content }}
+        </div>
+      </div>
     <div class="initial-content">
         <table>
             <tr>
