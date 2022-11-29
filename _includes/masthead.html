@@ -13,7 +13,16 @@
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          <li class="masthead__menu-item">
+            <a href="../assets/files/BabakBehkamkia_CV.pdf">CV</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="../coursesContainer.html">Course</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>Research</a>
+          </li>
+          <!-- {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
             {%- else -%}
@@ -22,7 +31,7 @@
             <li class="masthead__menu-item">
               <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
-          {%- endfor -%}
+          {%- endfor -%} -->
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
