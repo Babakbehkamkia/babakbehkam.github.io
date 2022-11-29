@@ -27,11 +27,7 @@ author_profile: true
           {% unless page.header.overlay_color or page.header.overlay_image %}
             <h1 id="page-title" class="page__title">{{ page.title }}</h1>
           {% endunless %}
-          {{ content }}
-        </div>
-      </div>
-    <div class="initial-content">
-        <table>
+          <table>
             <tr>
               <th>Firstname</th>
               <th>Lastname</th>
@@ -58,7 +54,8 @@ author_profile: true
               <td>$250</td>
             </tr>
           </table>
-    </div>
+        </div>
+      </div>
 
     {% if site.search == true %}
       <div class="search-content">
