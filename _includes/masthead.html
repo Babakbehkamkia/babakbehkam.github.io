@@ -17,7 +17,7 @@
             <a href="../assets/files/BabakBehkamkia_CV.pdf">CV</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="../coursesContainer.html">Course</a>
+            <a href="../coursesContainer.html" {% if link.description %}title="{{ link.description }}"{% endif %}>Course</a>
           </li>
           <li class="masthead__menu-item">
             <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>Research</a>
