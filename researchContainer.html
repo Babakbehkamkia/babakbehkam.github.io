@@ -34,17 +34,18 @@ author_profile: true
         }
         .row-item{
             border-bottom: solid 2px gray;
-            padding: 10%;
             
         }
         .title-class{
-            font-size: x-large;
             font-weight: bold;
-            text-decoration: underline;
         }
         .text-class{
             font-size: medium;
-            
+
+        }
+        .link-class{
+            color: blue;
+            text-decoration: underline;
         }
       </style>
     {% include head.html %}
@@ -64,7 +65,15 @@ author_profile: true
           {% endunless %}
           <div class="row-item">
             <p class="title-class">title:esm dars</p>
-            <p class="text-class">chrt chrt <a href="https:\\google.com">code</a></p>
+            <p class="text-class">chrt chrt <a class="link-class" href="https:\\google.com">code</a></p>
+          </div>
+          <div class="row-item">
+            <p class="title-class">title:esm dars</p>
+            <p class="text-class">chrt chrt <a class="link-class" href="https:\\google.com">code</a></p>
+          </div>
+          <div class="row-item">
+            <p class="title-class">title:esm dars</p>
+            <p class="text-class">chrt chrt <a class="link-class" href="https:\\google.com">code</a></p>
           </div>
         </div>
       </div>
