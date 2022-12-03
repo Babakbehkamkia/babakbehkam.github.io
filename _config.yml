@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" #"default" # "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US" 
-title                    : "Babak Behkam Kia"
+title                    : "Babak Behkamkia"
 title_separator          : "-"
 name                     : "Babak" 
 description              : "Welcome to my web site."
@@ -107,7 +107,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Babak behkam kia"
+  name             : "Babak Behkamkia"
   avatar           : /assets/images/6.jpg
   bio              : ""
   location         : "تهران"
