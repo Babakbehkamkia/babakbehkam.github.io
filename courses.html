@@ -47,6 +47,7 @@ author_profile: true
           background-color: #f1f1f1;
           display: flex;
           justify-content: space-around;
+          width: 100%;
         }
 
         /* Style the buttons inside the tab */
@@ -58,7 +59,7 @@ author_profile: true
           cursor: pointer;
           padding: 14px 16px;
           transition: 0.3s;
-          font-size: 17px;
+          width: 100%;
         }
 
         /* Change background color of buttons on hover */
@@ -96,7 +97,7 @@ author_profile: true
 
         <div  class="archive">
           {% unless page.header.overlay_color or page.header.overlay_image %}
-            <h1 id="page-title" class="page__title">Courses</h1>
+            <!-- <h1 id="page-title" class="page__title">Courses</h1> -->
           {% endunless %}
           <div class="tab-container">
             <div class="tab">
@@ -105,12 +106,13 @@ author_profile: true
           </div>
         </div>
           
-
-          <div id="University-Courses" class="tabcontent">
-            <p>
-              I am putting my related courses here. You can see the instructor's webpage by clicking on his/her name. 
-              I put a link to my GitHub repository for the corresponding course if available.
-            </p>
+        <div id="University-Courses">
+          <p style="font-size: 17px;">
+            I am putting my related courses here. You can see the instructor's webpage by clicking on his/her name. 
+            I put a link to my GitHub repository for the corresponding course if available.
+          </p>
+          <div  class="tabcontent">
+            
 
             <!-- <h2>
               Courses
@@ -240,87 +242,92 @@ author_profile: true
               </tr>
             </table>
           </div>
+        </div>
+          
+          <div id="Online-Courses">
+            <p style="font-size: 17px;">
+            I believe Self Learning is the most important skill of mine. I put the online courses that I have completed, here. You can see its certificate
+            by clicking on the name of course.
+          </p>
+          <table style="display: inline-table; padding-right: 20px;">
+            <tr>
+              <th>Course Name</th>
+              <th>Institution</th>
+              <th>Platform</th>
+            </tr>
+            
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DEBTCDMSG3GM">Generative Adversarial Networks (GANs) Specialization</a></td>
+              <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
+              <td>Coursera</td>
+            </tr>
 
-          <div id="Online-Courses" class="tabcontent">
-            <p>
-              I believe Self Learning is the most important skill of mine. I put the online courses that I have completed, here. You can see its certificate
-              by clicking on the name of course.
-            </p>
+
+            
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/S3NUHZCBNU3E">Deep Learning Specialization</a></td>
+              <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
+              <td>Coursera</td>
+            </tr>
+
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/URUL9WR66PSB">Advanced Algorithms and Complexity</a></td>
+              <td>UCSanDiego</td>
+              <td>Coursera</td>
+            </tr>
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/Y5MTZQGVL6G2">Getting started with TensorFlow 2</a></td>
+              <td>Imperial College London</td>
+              <td>Coursera</td>
+            </tr>
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/JM9FR285USEL">Algorithms on Strings</a></td>
+              <td>UCSanDiego</td>
+              <td>Coursera</td>
+            </tr>
+
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/W8GPSRR8P766">Algorithms on Graphs</a></td>
+              <td>UCSanDiego</td>
+              <td>Coursera</td>
+            </tr>
+
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/9E5TBV2ENVKJ">Data Structures</a></td>
+              <td>UCSanDiego</td>
+              <td>Coursera</td>
+            </tr>
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/BQ8FBHB6E9ZD">Algorithmic Toolbox</a></td>
+              <td>UCSanDiego</td>
+              <td>Coursera</td>
+            </tr>
+
+
+            <tr>
+              <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/BASTA5DQVGLD">Python for Everybody Specialization</a></td>
+              <td>University of Michigan</td>
+              <td>Coursera</td>
+            </tr>
+            
+
+          </table>
+        </div>
+        </div>
+          <div  class="tabcontent">
+            
             
             <!-- <h2>
               Teaching Assistant
             </h2> -->
   
-            <table style="display: inline-table; padding-right: 20px;">
-              <tr>
-                <th>Course Name</th>
-                <th>Institution</th>
-                <th>Platform</th>
-              </tr>
-              
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DEBTCDMSG3GM">Generative Adversarial Networks (GANs) Specialization</a></td>
-                <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
-                <td>Coursera</td>
-              </tr>
-  
-  
-              
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/S3NUHZCBNU3E">Deep Learning Specialization</a></td>
-                <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
-                <td>Coursera</td>
-              </tr>
 
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/URUL9WR66PSB">Advanced Algorithms and Complexity</a></td>
-                <td>UCSanDiego</td>
-                <td>Coursera</td>
-              </tr>
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/Y5MTZQGVL6G2">Getting started with TensorFlow 2</a></td>
-                <td>Imperial College London</td>
-                <td>Coursera</td>
-              </tr>
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/JM9FR285USEL">Algorithms on Strings</a></td>
-                <td>UCSanDiego</td>
-                <td>Coursera</td>
-              </tr>
-
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/W8GPSRR8P766">Algorithms on Graphs</a></td>
-                <td>UCSanDiego</td>
-                <td>Coursera</td>
-              </tr>
-
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/9E5TBV2ENVKJ">Data Structures</a></td>
-                <td>UCSanDiego</td>
-                <td>Coursera</td>
-              </tr>
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/BQ8FBHB6E9ZD">Algorithmic Toolbox</a></td>
-                <td>UCSanDiego</td>
-                <td>Coursera</td>
-              </tr>
-
-
-              <tr>
-                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/BASTA5DQVGLD">Python for Everybody Specialization</a></td>
-                <td>University of Michigan</td>
-                <td>Coursera</td>
-              </tr>
-              
-
-            </table>
-          </div>
 
           
         </div>
