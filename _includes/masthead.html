@@ -17,10 +17,19 @@
             <a href="../assets/files/BabakBehkamkia_CV.pdf">CV</a>
           </li>
           <li class="masthead__menu-item">
-            <a   href="/coursesContainer/" {% if link.description %}title="{{ link.description }}"{% endif %}>Course</a>
+            <a   href="/courses/" {% if link.description %}title="{{ link.description }}"{% endif %}>Course</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="/researchContainer/" {% if link.description %}title="{{ link.description }}"{% endif %}>Research</a>
+            <a href="/teaching/" {% if link.description %}title="{{ link.description }}"{% endif %}>Teaching</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="/research/" {% if link.description %}title="{{ link.description }}"{% endif %}>Research</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="/projects/" {% if link.description %}title="{{ link.description }}"{% endif %}>Project</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a href="/hobbies/" {% if link.description %}title="{{ link.description }}"{% endif %}>Hobbies</a>
           </li>
           <!-- {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
