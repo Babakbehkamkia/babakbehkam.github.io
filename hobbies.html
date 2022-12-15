@@ -1,24 +1,88 @@
 ---
-layout: archive
+author_profile: true
 ---
 
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+    
+  <head>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+  
+        th,
+        td {
+          text-align: left;
+          padding: 8px;
+        }
+  
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        th {
+          background-color: #04aa6d;
+          color: white;
+        }
+      </style>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
 
-<p>
-    I like spending time in some activities which make me relaxed because I believe it will improve my productivity.
-</p>
-<p>
-    Here is the list of my leisure time activities:
-</p>
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+    <div id="main" role="main">
+        {% include sidebar.html %}
+      
+        <div  class="archive">
+          {% unless page.header.overlay_color or page.header.overlay_image %}
+            <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+          {% endunless %}
+          
+          <p>
+            I like spending time in some activities which make me relaxed because I believe it will improve my productivity.
+        </p>
+        <p>
+            Here is the list of my leisure time activities:
+        </p>
+        
+        
+        <div>
+            <ul>
+                <li>Playing and Watching Football</li>
+                <li>Watching TV series (especially sitcoms)</li>
+                <li>Playing Video Games</li>
+                <li>YouTube</li>
+                <li>GYM</li>
+              </ul>  
+          </div>
+        </div>
+      </div>
 
-<div>
-    <ul>
-        <li>Playing and Watching Football</li>
-        <li>Watching TV series (especially sitcoms)</li>
-        <li>Playing Video Games</li>
-        <li>YouTube</li>
-        <li>GYM</li>
-      </ul>  
-  </div>
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
 
-{% include paginator.html %}
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
