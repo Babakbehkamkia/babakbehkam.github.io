@@ -32,12 +32,58 @@ author_profile: true
           background-color: #04aa6d;
           color: white;
         }
+
+
+        /* style for tabs */
+
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
       </style>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'University Courses')">University Courses</button>
+      <button class="tablinks" onclick="openCity(event, 'Online Courses')">Online Courses</button>
+    </div>
+
 
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
@@ -48,138 +94,222 @@ author_profile: true
           {% unless page.header.overlay_color or page.header.overlay_image %}
             <h1 id="page-title" class="page__title">Courses</h1>
           {% endunless %}
-          <p>
-            I am putting my related courses here. You can see the instructor's webpage by clicking on his/her name. 
-            I put a link to my GitHub repository for the corresponding course if available.
-          </p>
 
-          <!-- <h2>
-            Courses
-          </h2> -->
+          <div id="University Courses" class="tabcontent"></div>
+            <p>
+              I am putting my related courses here. You can see the instructor's webpage by clicking on his/her name. 
+              I put a link to my GitHub repository for the corresponding course if available.
+            </p>
 
-          <table style="display: inline-table; padding-right: 20px;">
-            <tr>
-              <th>Course Name</th>
-              <th>Instructor</th>
-              <th>Semester</th>
-              <th>Grade</th>
-            </tr>
+            <!-- <h2>
+              Courses
+            </h2> -->
 
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/Computer-Vision">Computer Vision</a></td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/mrmohammadi/index.html">Dr. Mohammadi</a></td>
-              <td>Fall 2022</td>
-              <td>-</td>
-            </tr>
+            <table style="display: inline-table; padding-right: 20px;">
+              <tr>
+                <th>Course Name</th>
+                <th>Instructor</th>
+                <th>Semester</th>
+                <th>Grade</th>
+              </tr>
 
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/Deep-Learning">Deep Learning</a></td>
-              <td>Dr. Davoud Abadi</td>
-              <td>Fall 2022</td>
-              <td>-</td>
-            </tr>
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/Computer-Vision">Computer Vision</a></td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/mrmohammadi/index.html">Dr. Mohammadi</a></td>
+                <td>Fall 2022</td>
+                <td>-</td>
+              </tr>
+
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/Deep-Learning">Deep Learning</a></td>
+                <td>Dr. Davoud Abadi</td>
+                <td>Fall 2022</td>
+                <td>-</td>
+              </tr>
+              
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/Computational-Intelligence">Computational Intelligence</a></td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/mozayani/">Dr. Nasser Mozayani</a></td>
+                <td>Spring 2022</td>
+                <td>A+</td>
+              </tr>
+
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/OpenUnderstand">Compiler Design</a></td>
+                <td><a class="link-class" href="https://scholar.google.com/citations?user=uONxvOwAAAAJ&hl=en">Dr. Saeed Parsa</a></td>
+                <td>Spring 2022</td>
+                <td>A</td>
+              </tr>
+
+              <tr>
+                <td>Operating System</td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/entezari/">Dr. Reza Entezari-Maleki</a></td>
+                <td>Spring 2022</td>
+                <td>A+</td>
+              </tr>
+
+
+              <tr>
+                <td>Software Engineering</td>
+                <td><a class="link-class" href="https://scholar.google.com/citations?user=M8tgU-wAAAAJ&hl=en">Dr. Behrouz Minaei Bidgoli</a></td>
+                <td>Spring 2022</td>
+                <td>A+</td>
+              </tr>
+
+              
+              <tr>
+                <td>Data Transmission</td>
+                <td><a class="link-class" href="https://adiyanat.com/">Dr. Abolfazl Diyanat</a></td>
+                <td>Fall 2021</td>
+                <td>A+</td>
+              </tr>
+
+              
+              
+              <tr>
+                <td>Software Design and Analysis</td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/m_ashtiani/">Dr. Mehrdad Ashtiani</a></td>
+                <td>Fall 2021</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Artificial Intelligence</td>
+                <td><a class="link-class" href="https://scholar.google.com/citations?user=M8tgU-wAAAAJ&hl=en">Dr. Behrouz Minaei Bidgoli</a></td>
+                <td>Fall 2021</td>
+                <td>A+</td>
+              </tr>
+
+              <tr>
+                <td>Theory of Languages and Machines</td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/entezari/">Dr. Reza Entezari-Maleki</a></td>
+                <td>Spring 2021</td>
+                <td>A+</td>
+              </tr>
+              
+              <tr>
+                <td>Database Design</td>
+                <td><a class="link-class" href="http://webpages.iust.ac.ir/h_rahmani/">Dr. Hossein Rahmani</a></td>
+                <td>Spring 2021</td>
+                <td>A+</td>
+              </tr>
+              
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/Algorithm-Design">Algorithm Design</a></td>
+                <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
+                <td>Spring 2021</td>
+                <td>A+</td>
+              </tr>
+
+              <tr>
+                <td>Statistics</td>
+                <td>Dr. ahmadi</td>
+                <td>Fall 2020</td>
+                <td>A+</td>
+              </tr>
+              
+              <tr>
+                <td><a class="link-class" href="https://github.com/Babakbehkamkia/Data-Structures">Data Structures</a></td>
+                <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
+                <td>Fall 2020</td>
+                <td>A+</td>
+              </tr>
+              
+              <tr>
+                <td>Advanced Programming</td>
+                <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
+                <td>Spring 2020</td>
+                <td>A+</td>
+              </tr>
+
+              <tr>
+                <td>Fundamentals of Computer and Programming</td>
+                <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
+                <td>Fall 2019</td>
+                <td>A+</td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="Online Courses" class="tabcontent">
+            <p>
+              I believe Self Learning is the most important skill of mine. I put the online courses that I have completed, here. You can see its certificate
+              by clicking on the name of course.
+            </p>
             
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/Computational-Intelligence">Computational Intelligence</a></td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/mozayani/">Dr. Nasser Mozayani</a></td>
-              <td>Spring 2022</td>
-              <td>A+</td>
-            </tr>
+            <!-- <h2>
+              Teaching Assistant
+            </h2> -->
+  
+            <table style="display: inline-table; padding-right: 20px;">
+              <tr>
+                <th>Course Name</th>
+                <th>Institution</th>
+                <th>Platform</th>
+              </tr>
+              
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DEBTCDMSG3GM">Generative Adversarial Networks (GANs) Specialization</a></td>
+                <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
+                <td>Coursera</td>
+              </tr>
+  
+  
+              
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/S3NUHZCBNU3E">Deep Learning Specialization</a></td>
+                <td><a class="link-class" href="https://www.deeplearning.ai/">DeepLearning.AI</a></td>
+                <td>Coursera</td>
+              </tr>
 
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/OpenUnderstand">Compiler Design</a></td>
-              <td><a class="link-class" href="https://scholar.google.com/citations?user=uONxvOwAAAAJ&hl=en">Dr. Saeed Parsa</a></td>
-              <td>Spring 2022</td>
-              <td>A</td>
-            </tr>
 
-            <tr>
-              <td>Operating System</td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/entezari/">Dr. Reza Entezari-Maleki</a></td>
-              <td>Spring 2022</td>
-              <td>A+</td>
-            </tr>
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/URUL9WR66PSB">Advanced Algorithms and Complexity</a></td>
+                <td>UCSanDiego</td>
+                <td>Coursera</td>
+              </tr>
+
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/Y5MTZQGVL6G2">Getting started with TensorFlow 2</a></td>
+                <td>Imperial College London</td>
+                <td>Coursera</td>
+              </tr>
+
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/JM9FR285USEL">Algorithms on Strings</a></td>
+                <td>UCSanDiego</td>
+                <td>Coursera</td>
+              </tr>
 
 
-            <tr>
-              <td>Software Engineering</td>
-              <td><a class="link-class" href="https://scholar.google.com/citations?user=M8tgU-wAAAAJ&hl=en">Dr. Behrouz Minaei Bidgoli</a></td>
-              <td>Spring 2022</td>
-              <td>A+</td>
-            </tr>
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/W8GPSRR8P766">Algorithms on Graphs</a></td>
+                <td>UCSanDiego</td>
+                <td>Coursera</td>
+              </tr>
 
-            
-            <tr>
-              <td>Data Transmission</td>
-              <td><a class="link-class" href="https://adiyanat.com/">Dr. Abolfazl Diyanat</a></td>
-              <td>Fall 2021</td>
-              <td>A+</td>
-            </tr>
 
-            
-            
-            <tr>
-              <td>Software Design and Analysis</td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/m_ashtiani/">Dr. Mehrdad Ashtiani</a></td>
-              <td>Fall 2021</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Artificial Intelligence</td>
-              <td><a class="link-class" href="https://scholar.google.com/citations?user=M8tgU-wAAAAJ&hl=en">Dr. Behrouz Minaei Bidgoli</a></td>
-              <td>Fall 2021</td>
-              <td>A+</td>
-            </tr>
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/9E5TBV2ENVKJ">Data Structures</a></td>
+                <td>UCSanDiego</td>
+                <td>Coursera</td>
+              </tr>
 
-            <tr>
-              <td>Theory of Languages and Machines</td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/entezari/">Dr. Reza Entezari-Maleki</a></td>
-              <td>Spring 2021</td>
-              <td>A+</td>
-            </tr>
-            
-            <tr>
-              <td>Database Design</td>
-              <td><a class="link-class" href="http://webpages.iust.ac.ir/h_rahmani/">Dr. Hossein Rahmani</a></td>
-              <td>Spring 2021</td>
-              <td>A+</td>
-            </tr>
-            
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/Algorithm-Design">Algorithm Design</a></td>
-              <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
-              <td>Spring 2021</td>
-              <td>A+</td>
-            </tr>
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/certificate/BQ8FBHB6E9ZD">Algorithmic Toolbox</a></td>
+                <td>UCSanDiego</td>
+                <td>Coursera</td>
+              </tr>
 
-            <tr>
-              <td>Statistics</td>
-              <td>Dr. ahmadi</td>
-              <td>Fall 2020</td>
-              <td>A+</td>
-            </tr>
-            
-            <tr>
-              <td><a class="link-class" href="https://github.com/Babakbehkamkia/Data-Structures">Data Structures</a></td>
-              <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
-              <td>Fall 2020</td>
-              <td>A+</td>
-            </tr>
-            
-            <tr>
-              <td>Advanced Programming</td>
-              <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
-              <td>Spring 2020</td>
-              <td>A+</td>
-            </tr>
 
-            <tr>
-              <td>Fundamentals of Computer and Programming</td>
-              <td><a class="link-class" href="https://www.sauleh.ir/">Dr. Sauleh Eetemadi</a></td>
-              <td>Fall 2019</td>
-              <td>A+</td>
-            </tr>
-          </table>
+              <tr>
+                <td><a class="link-class" href="https://www.coursera.org/account/accomplishments/specialization/certificate/BASTA5DQVGLD">Python for Everybody Specialization</a></td>
+                <td>University of Michigan</td>
+                <td>Coursera</td>
+              </tr>
+              
+
+            </table>
+          </div>
 
           
         </div>
@@ -199,6 +329,22 @@ author_profile: true
     </div>
 
     {% include scripts.html %}
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
 
   </body>
 </html>
