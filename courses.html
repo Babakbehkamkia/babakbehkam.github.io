@@ -93,11 +93,11 @@ author_profile: true
           {% endunless %}
 
           <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'University Courses')">University Courses</button>
-            <button class="tablinks" onclick="openCity(event, 'Online Courses')">Online Courses</button>
+            <button class="tablinks" onclick="openCity(event, 'University-Courses')">University Courses</button>
+            <button class="tablinks" onclick="openCity(event, 'Online-Courses')">Online Courses</button>
           </div>
-          
-          <div id="University Courses" class="tabcontent"></div>
+
+          <div id="University-Courses" class="tabcontent">
             <p>
               I am putting my related courses here. You can see the instructor's webpage by clicking on his/her name. 
               I put a link to my GitHub repository for the corresponding course if available.
@@ -232,7 +232,7 @@ author_profile: true
             </table>
           </div>
 
-          <div id="Online Courses" class="tabcontent">
+          <div id="Online-Courses" class="tabcontent">
             <p>
               I believe Self Learning is the most important skill of mine. I put the online courses that I have completed, here. You can see its certificate
               by clicking on the name of course.
@@ -317,11 +317,6 @@ author_profile: true
         </div>
       </div>
 
-    <!-- {% if site.search == true %}
-      <div class="search-content">
-        {% include_cached search/search_form.html %}
-      </div>
-    {% endif %} -->
 
     <div class="page__footer">
       <footer>
@@ -337,7 +332,7 @@ author_profile: true
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+          tabcontent.style.display = "none";
         }
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
